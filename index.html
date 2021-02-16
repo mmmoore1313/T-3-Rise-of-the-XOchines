@@ -21,47 +21,82 @@
         add a home screen function
       </div>
       <hr>
-      <div id='sign-up'>
-        add a signup function
-      </div>
-      <hr>
-      <div id='sign-in'>
-        add a signin function
-      </div>
-      <hr>
-      <div id='leader-board'>
-        add a leadeboard function
-      </div>
-      <hr>
-      <div id='menu'>
-        add a menu function
-      </div>
-      <hr>
-      <div id='edit'>
-        add an edit function
-      </div>
-      <hr>
-      <div id='how-to'>
-        add a how to function
-      </div>
-      <hr>
-      <div id='about'>
-        add an about function
-      </div>
-      <hr>
-      <div class='container' id='game-board'>
-        flush out the game function 1st
-        <div class="row">
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='0'>tic</div>
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='1'>tac</div>
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>toe</div>
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='3'>three</div>
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='4'>in</div>
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='5'>a row</div>
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='6'>X</div>
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='7'>vs.</div>
-          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='8'>O</div>
+      <section id='auth-section'>
+        <form id='sign-up'>
+          <input name='credentials[email]' type='email' placeholder='Your Email' required>
+          <input name='credentials[password]' type='password' placeholder='Enter password' required>
+          <input name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
+          <button>
+            Sign me up!
+          </button>
+        </form>
+        <hr>
+        <div id='sign-in'>
+          add a signin function
         </div>
-      </div>
+      </section>
+      <hr>
+      <section id='user-section'>
+        <div id='leader-board'>
+          add a leadeboard function
+        </div>
+        <hr>
+        <div id='menu'>
+          add a menu function
+        </div>
+        <hr>
+        <div id='edit'>
+          add an edit function
+        </div>
+      </section>
+      <hr>
+      <section id='literature'>
+        <div id='how-to'>
+          add a how to function
+        </div>
+        <hr>
+        <div id='about'>
+          add an about function
+        </div>
+        <hr>
+      </section>
+      <section id='game'>
+        <div class='container' id='game-board'>
+          flush out the game function 1st
+          <div class="row">
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='0' id='attempt'>
+              tic
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='1'>
+              tac
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>
+              toe
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='3'>
+              three
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='4'>
+              in
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='5'>
+              a row
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='6'>
+              X
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='7'>
+              vs.
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='8'>
+              O
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='messages'>
+        <div id='error-message'></div>
+        <div id='games-display'></div>
+      </section>
     </body>
 </html>
