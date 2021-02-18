@@ -19,13 +19,19 @@ const signInSuccess = function (response) {
   $('#sign-in').hide()
 }
 
+const changeSuccess = function (response) {
+  $('#message').text("Passwords are like yesterday's pants: you changed em!")
+  $('#change-password').trigger('reset')
+}
+
 const authFailure = function (response) {
   console.log('yeeah, nah')
-  $('#message').text('Something went password_confirmation')
+  $('#message').text('Something went wrong. Please try again')
 }
 
 module.exports = {
   signUpSuccess,
   signInSuccess,
+  changeSuccess,
   authFailure
 }
