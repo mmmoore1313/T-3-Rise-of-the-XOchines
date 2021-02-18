@@ -6,6 +6,18 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
+const gameEvents = require('./games/events')
+const authEvents = require('./auth/events')
+
 $(() => {
   // your JS code goes here
+  // auth events
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-in').on('submit', authEvents.onSignIn)
+
+  // hidden until acted upon with signin or new game
+  $('#game').hide()
+  //$('#user-section').hide()
+  // game events
+  $('#game-board').on('click', gameEvents.userChoice)
 })
