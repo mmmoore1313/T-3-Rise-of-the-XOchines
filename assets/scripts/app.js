@@ -40,8 +40,11 @@ $(() => {
   // hidden until signed-in
   $('#sign-out').hide()
   $('#user-section').hide()
+  // hidden until how to is clicked
+  $('#howto').hide()
+  $('#home').hide()
   // hidden until edit button is clicked
-  $('#edit').hide()
+  $('#changepw').hide()
 
   // show buttons
   $('#signup').click(function (){
@@ -51,6 +54,29 @@ $(() => {
   $('#login').click(function () {
     $('#sign-in').show()
     $('#login').hide()
+  })
+  $('#edit').click(function () {
+    $('#changepw').show()
+    $('#user-section').hide()
+  })
+  $('#how-to').click(function () {
+    $('#howto').show()
+    $('#front-screen').hide()
+    $('.home').hide()
+    $('#front').click(function () {
+      $('#front-screen').show()
+      $('#howto').hide()
+    })
+  })
+  $('#instructions').click(function () {
+    $('#howto').show()
+    $('#user-section').hide()
+    $('#front').hide()
+  })
+  $('.home').click( function () {
+    $('#user-section').show()
+    $('#howto').hide()
+    $('#changepw').hide()
   })
   // game events
   $('#game-board').on('click', gameEvents.userChoice)

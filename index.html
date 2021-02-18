@@ -17,11 +17,11 @@
         <h1>Tic Tac Toe</h1>
       </div>
       <hr>
-      <div id='home-screen'>
+      <div id='front-screen'>
         <button class='new-game'>
           Quick Game
         </button>
-        <button class='how-to'>
+        <button id='how-to'>
           How to
         </button>
         <section id='auth-section'>
@@ -49,56 +49,64 @@
                 </button>
               </form>
           </div>
-          <form id='sign-out'>
-            <button>
-              Sign Out!
-            </button>
-          </form>
+
         </section>
         <button class='about-us'>
           About Us
         </button>
       </div>
-      <hr>
-
-      <hr>
       <section id='user-section'>
         <div id='menu'>
-          add a menu function
           <button id='leaderboard'>
             Leaderboard
           </button>
           <div id='stats'>
             add a leadeboard function
           </div>
-          <button>
+          <button id='new-game'>
+            New Game
+          </button>
+          <button id='edit'>
             Edit
           </button>
-          <div id='edit'>
-            <h6>
-              Change Password
-            </h6>
-            <form id='change-password'>
-              <input name='passwords[old]' type='password' placeholder='Old Password' required>
-              <input name='passwords[new]' type='password' placeholder='New Password' required>
-              <button>
-                Change Password
-              </button>
-            </form>
-          </div>
+          <form id='sign-out'>
+            <button>
+              Sign Out!
+            </button>
+          </form>
+          <button id='instructions'>
+            instructions
+          </button>
         </div>
       </section>
+      <div id='changepw'>
+        <h6>
+          Change Password
+        </h6>
+        <form id='change-password'>
+          <input name='passwords[old]' type='password' placeholder='Old Password' required>
+          <input name='passwords[new]' type='password' placeholder='New Password' required>
+          <button>
+            Change Password
+          </button>
+        </form>
+        <button class='home'>
+          Cancel
+        </button>
+      </div>
+      <div id='howto'>
+        <h2>How To</h2>
+        <p>
+          This is where you learn how to play Tic Tac Toe
+        </p>
+        <button id='front'>
+          Back
+        </button>
+        <button class='home'>
+          Home
+        </button>
+      </div>
       <hr>
-      <section id='literature'>
-        <div id='how-to'>
-          add a how to function
-        </div>
-        <hr>
-        <div id='about'>
-          add an about function
-        </div>
-        <hr>
-      </section>
       <section id='game'>
         <div class='container' id='game-board'>
           flush out the game function 1st

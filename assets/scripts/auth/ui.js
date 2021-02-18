@@ -17,7 +17,7 @@ const signInSuccess = function (response) {
   $('#user-section').show()
   $('#sign-out').show()
 
-  $('#signon').hide()
+  $('#front-screen').hide()
 }
 
 const signOutSuccess = function () {
@@ -29,6 +29,8 @@ const signOutSuccess = function () {
 const changeSuccess = function (response) {
   $('#message').text("Passwords are like yesterday's pants: you changed em!")
   $('#change-password').trigger('reset')
+  $('#changepw').hide()
+  $('#user-section').show()
 }
 
 const authFailure = function (response) {
