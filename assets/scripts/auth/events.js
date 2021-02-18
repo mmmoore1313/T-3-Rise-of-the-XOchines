@@ -25,7 +25,17 @@ const onSignIn = function (event) {
     .catch(ui.authFailure)
 }
 
+const onChagePassword = function (event) {
+  event.preventDefault()
+
+  const data = getFormFields(this)
+  api.changePassword(data)
+    .then(ui.changeSuccess)
+    .catch(ui.authFailure)
+}
+
 module.exports = {
   onSignUp,
-  onSignIn
+  onSignIn,
+  onChagePassword
 }
