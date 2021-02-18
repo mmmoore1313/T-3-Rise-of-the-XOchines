@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>T3: Rise of the XOchines</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div id='title'>
+        <h1>Tic Tac Toe</h1>
+      </div>
+      <hr>
+      <div id='front-screen'>
+        <button id='newgame'>
+          Quick Game
+        </button>
+        <button id='how-to'>
+          How to
+        </button>
+        <section id='auth-section'>
+          <div id='signon'>
+            <button id='signup'>
+              Sign Up!
+            </button>
+            <form id='sign-up'>
+              <input name='credentials[email]' type='email' placeholder='Your Email' required>
+              <input name='credentials[password]' type='password' placeholder='Enter password' required>
+              <input name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
+              <button>
+                Sign me up!
+              </button>
+            </form>
+            <br>
+            <button id='login'>
+              Login!
+            </button>
+            <form id='sign-in'>
+                <input name='credentials[email]' type='email' placeholder='Your Email' required>
+                <input name='credentials[password]' type='password' placeholder='Your Password' required>
+                <button>
+                  Login
+                </button>
+              </form>
+          </div>
+
+        </section>
+        <button class='about-us'>
+          About Us
+        </button>
+      </div>
+      <section id='user-section'>
+        <div id='menu'>
+          <button id='leaderboard'>
+            Stats
+          </button>
+          <button id='new-game'>
+            New Game
+          </button>
+          <button id='edit'>
+            Edit
+          </button>
+          <form id='sign-out'>
+            <button>
+              Sign Out!
+            </button>
+          </form>
+          <button id='instructions'>
+            instructions
+          </button>
+        </div>
+      </section>
+      <div id='changepw'>
+        <h6>
+          Change Password
+        </h6>
+        <form id='change-password'>
+          <input name='passwords[old]' type='password' placeholder='Old Password' required>
+          <input name='passwords[new]' type='password' placeholder='New Password' required>
+          <br>
+          <button>
+            Change Password
+          </button>
+        </form>
+        <button class='home'>
+          Cancel
+        </button>
+      </div>
+      <div id='howto'>
+        <h2>How To</h2>
+        <p>
+          This is where you learn how to play Tic Tac Toe
+        </p>
+        <button class='front'>
+          Back
+        </button>
+        <button class='home'>
+          Home
+        </button>
+      </div>
+      <div id='about'>
+        <h2>About Us</h2>
+        <p> This is where you can read about our plans</p>
+        <button class='front'>
+          Back
+        </button>
+        <button class='home'>
+          Home
+        </button>
+      </div>
+      <div id='stats'>
+        <button id='games-index'>
+          All games
+        </button>
+        <button class='home'>
+          Home
+        </button>
+
+      </div>
+      <hr>
+      <section id='game'>
+        <button class='home'>
+          Home
+        </button>
+        <button class='front'>
+          Back
+        </button>
+        <button id='start'>
+          Start
+        </button>
+        <div class='container' id='game-board'>
+          flush out the game function 1st
+          <div class="row">
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='0' id='attempt'>
+              tic
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='1'>
+              tac
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>
+              toe
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='3'>
+              three
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='4'>
+              in
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='5'>
+              a row
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='6'>
+              X
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='7'>
+              vs.
+            </div>
+            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='8'>
+              O
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='messages'>
+        <div id='message'></div>
+        <div id='games-display'></div>
+      </section>
+    </body>
+</html>
