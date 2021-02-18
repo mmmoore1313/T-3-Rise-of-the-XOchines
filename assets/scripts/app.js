@@ -16,9 +16,13 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChagePassword)
 
-  // hidden until acted upon with signin or new game
+  // hidden until acted upon with new game
   $('#game').hide()
-  //$('#user-section').hide()
+  // hidden until acted upon with sign-in
+  $('#user-section').hide()
+  // hidden until edit button is clicked
+  $('#edit').hide()
+
   // game events
   $('#game-board').on('click', gameEvents.userChoice)
 })
