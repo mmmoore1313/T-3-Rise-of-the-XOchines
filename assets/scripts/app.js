@@ -20,6 +20,7 @@ $(() => {
   // hidden until acted upon with new game
   $('#game').hide()
   // hidden until acted upon with sign-in
+  $('#sign-out').hide()
   $('#user-section').hide()
   // hidden until edit button is clicked
   $('#edit').hide()
