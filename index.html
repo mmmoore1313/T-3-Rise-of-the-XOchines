@@ -18,32 +18,40 @@
       </div>
       <hr>
       <div id='home-screen'>
+        <section id='auth-section'>
+          <div id='signon'>
+            <button id='signup'>
+              Sign Up!
+            </button>
+            <form id='sign-up'>
+              <input name='credentials[email]' type='email' placeholder='Your Email' required>
+              <input name='credentials[password]' type='password' placeholder='Enter password' required>
+              <input name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
+              <button>
+                Sign me up!
+              </button>
+            </form>
+            <button id='login'>
+              Login!
+            </button>
+            <form id='sign-in'>
+                <input name='credentials[email]' type='email' placeholder='Your Email' required>
+                <input name='credentials[password]' type='password' placeholder='Your Password' required>
+                <button>
+                  Login
+                </button>
+              </form>
+          </div>
+          <form id='sign-out'>
+            <button>
+              Sign Out!
+            </button>
+          </form>
+        </section>
         add a home screen function
       </div>
       <hr>
-      <section id='auth-section'>
-        <form id='sign-up'>
-          <input name='credentials[email]' type='email' placeholder='Your Email' required>
-          <input name='credentials[password]' type='password' placeholder='Enter password' required>
-          <input name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
-          <button>
-            Sign me up!
-          </button>
-        </form>
-        <hr>
-        <form id='sign-in'>
-          <input name='credentials[email]' type='email' placeholder='Your Email' required>
-          <input name='credentials[password]' type='password' placeholder='Your Password' required>
-          <button>
-            Login
-          </button>
-        </form>
-        <form id='sign-out'>
-          <button>
-            Sign Out!
-          </button>
-        </form>
-      </section>
+
       <hr>
       <section id='user-section'>
         <div id='menu'>

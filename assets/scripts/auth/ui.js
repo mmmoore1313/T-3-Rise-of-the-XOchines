@@ -5,6 +5,7 @@ const signUpSuccess = function (response) {
   console.log('nah, yeeah')
   $('#message').text('Thank you for signing up! Please enter your login credentials')
   $('#sign-up').trigger('reset')
+  location.reload()
 }
 
 const signInSuccess = function (response) {
@@ -16,8 +17,7 @@ const signInSuccess = function (response) {
   $('#user-section').show()
   $('#sign-out').show()
 
-  $('#sign-up').hide()
-  $('#sign-in').hide()
+  $('#signon').hide()
 }
 
 const signOutSuccess = function () {

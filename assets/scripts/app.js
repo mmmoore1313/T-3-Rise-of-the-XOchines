@@ -34,12 +34,24 @@ $(() => {
 
   // hidden until acted upon with new game
   $('#game').hide()
-  // hidden until acted upon with sign-in
+  // hidden until acted upon with signup or login buttons
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  // hidden until signed-in
   $('#sign-out').hide()
   $('#user-section').hide()
   // hidden until edit button is clicked
-   $('#edit').hide()
+  $('#edit').hide()
 
+  // show buttons
+  $('#signup').click(function (){
+    $('#sign-up').show()
+    $('#signup').hide()
+  })
+  $('#login').click(function () {
+    $('#sign-in').show()
+    $('#login').hide()
+  })
   // game events
   $('#game-board').on('click', gameEvents.userChoice)
 })
