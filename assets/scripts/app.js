@@ -14,6 +14,7 @@ $(() => {
   // auth events
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#change-password').on('submit', authEvents.onChagePassword)
 
   // hidden until acted upon with signin or new game
   $('#game').hide()
