@@ -13,7 +13,7 @@ const signInSuccess = function (response) {
   $('#message').text('Welcome back!')
   $('#sign-in').trigger('reset')
 
-  //$('#user-section').show()
+  $('#user-section').show()
 
   $('#sign-up').hide()
   $('#sign-in').hide()
