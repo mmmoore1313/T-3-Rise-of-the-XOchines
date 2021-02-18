@@ -74,6 +74,7 @@ $(() => {
   })
   $('#instructions').click(function () {
     $('#howto').show()
+    $('.home').show()
     $('#user-section').hide()
     $('.front').hide()
   })
