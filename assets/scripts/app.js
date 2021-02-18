@@ -14,7 +14,22 @@ $(() => {
   // auth events
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#sign-out').click(function () {
+    event.preventDefault()
+    const signOutHtml = `
+    <h4>Are you sure you want to leave?</h4><br>
+
+    <button id='yeeah'>Yes</button>
+    <button class='naah'>No</button>
+
+    `
+    $('#message').html(signOutHtml)
+    $('#naah').click(function () {
+        event.preventDefault()
+        $('#message').html('')
+      })
+    $('#yeeah').on('click', authEvents.onSignOut)
+  })
   $('#change-password').on('submit', authEvents.onChagePassword)
 
   // hidden until acted upon with new game
@@ -23,7 +38,7 @@ $(() => {
   $('#sign-out').hide()
   $('#user-section').hide()
   // hidden until edit button is clicked
-  $('#edit').hide()
+   $('#edit').hide()
 
   // game events
   $('#game-board').on('click', gameEvents.userChoice)

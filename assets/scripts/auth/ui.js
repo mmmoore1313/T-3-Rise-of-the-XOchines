@@ -14,9 +14,16 @@ const signInSuccess = function (response) {
   $('#sign-in').trigger('reset')
 
   $('#user-section').show()
+  $('#sign-out').show()
 
   $('#sign-up').hide()
   $('#sign-in').hide()
+}
+
+const signOutSuccess = function () {
+  $('#message').text('Okay, bye-bye for now!')
+  store.user = null
+  location.reload()
 }
 
 const changeSuccess = function (response) {
@@ -32,6 +39,7 @@ const authFailure = function (response) {
 module.exports = {
   signUpSuccess,
   signInSuccess,
+  signOutSuccess,
   changeSuccess,
   authFailure
 }
