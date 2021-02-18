@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 curl "https://tic-tac-toe-api-production.herokuapp.com/sign-out" \
