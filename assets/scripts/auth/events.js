@@ -34,7 +34,7 @@ const onChagePassword = function (event) {
     .catch(ui.authFailure)
 }
 
-const onSignOut = function (event){
+const onSignOut = function (event) {
   event.preventDefault()
 
   api.signOut()
