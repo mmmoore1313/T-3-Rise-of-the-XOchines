@@ -42,7 +42,9 @@ $(() => {
   $('#user-section').hide()
   // hidden until how to is clicked
   $('#howto').hide()
-  $('#home').hide()
+  $('#about').hide()
+  $('.home').hide()
+  $('#games-index').hide()
   // hidden until edit button is clicked
   $('#changepw').hide()
 
@@ -57,27 +59,60 @@ $(() => {
   })
   $('#edit').click(function () {
     $('#changepw').show()
+    $('.home').show()
     $('#user-section').hide()
   })
   $('#how-to').click(function () {
     $('#howto').show()
     $('#front-screen').hide()
     $('.home').hide()
-    $('#front').click(function () {
-      $('#front-screen').show()
-      $('#howto').hide()
-    })
+  })
+  $('.about-us').click(function () {
+    $('#about').show()
+    $('#front-screen').hide()
+    $('.home').hide()
   })
   $('#instructions').click(function () {
     $('#howto').show()
     $('#user-section').hide()
-    $('#front').hide()
+    $('.front').hide()
   })
+  $('#leaderboard').click(function () {
+    $('#stats').show()
+    $('.home').show()
+    $('#games-index').show()
+    $('#user-section').hide()
+  })
+  $('#new-game').click(function() {
+    $('#game').show()
+    $('.home').show()
+    $('#user-section').hide()
+    $('.front').hide()
+  })
+  $('#newgame').click(function () {
+    $('#game').show()
+    $('.front').show()
+    $('#front-screen').hide()
+  })
+  // oft used buttons
   $('.home').click( function () {
     $('#user-section').show()
     $('#howto').hide()
     $('#changepw').hide()
+    $('#about').hide()
+    $('#stats').hide()
+    $('#game').hide()
+    $('.home').hide()
+  })
+  $('.front').click(function () {
+    $('#front-screen').show()
+    $('#howto').hide()
+    $('#about').hide()
+    $('#game').hide()
   })
   // game events
+  $('#games-index').on('click', gameEvents.onIndexGames)
+  $('#start').on('click', gameEvents.onNewGame)
+
   $('#game-board').on('click', gameEvents.userChoice)
 })

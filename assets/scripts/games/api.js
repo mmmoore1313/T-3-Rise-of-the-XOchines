@@ -1,10 +1,14 @@
 
 const config = require('../config')
+const store = require('../store')
 
 const index = function () {
   return $.ajax({
     method: 'GET',
-    url: 'https://tic-tac-toe-api-production.herokuapp.com/games/'
+    url: config.apiUrl + '/games',
+    headers: {
+      Autorization: 'Token token=' + store.user.token
+    }
   })
 }
 

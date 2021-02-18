@@ -18,7 +18,7 @@
       </div>
       <hr>
       <div id='front-screen'>
-        <button class='new-game'>
+        <button id='newgame'>
           Quick Game
         </button>
         <button id='how-to'>
@@ -58,11 +58,8 @@
       <section id='user-section'>
         <div id='menu'>
           <button id='leaderboard'>
-            Leaderboard
+            Stats
           </button>
-          <div id='stats'>
-            add a leadeboard function
-          </div>
           <button id='new-game'>
             New Game
           </button>
@@ -86,6 +83,7 @@
         <form id='change-password'>
           <input name='passwords[old]' type='password' placeholder='Old Password' required>
           <input name='passwords[new]' type='password' placeholder='New Password' required>
+          <br>
           <button>
             Change Password
           </button>
@@ -99,15 +97,43 @@
         <p>
           This is where you learn how to play Tic Tac Toe
         </p>
-        <button id='front'>
+        <button class='front'>
           Back
         </button>
         <button class='home'>
           Home
         </button>
       </div>
+      <div id='about'>
+        <h2>About Us</h2>
+        <p> This is where you can read about our plans</p>
+        <button class='front'>
+          Back
+        </button>
+        <button class='home'>
+          Home
+        </button>
+      </div>
+      <div id='stats'>
+        <button id='games-index'>
+          All games
+        </button>
+        <button class='home'>
+          Home
+        </button>
+
+      </div>
       <hr>
       <section id='game'>
+        <button class='home'>
+          Home
+        </button>
+        <button class='front'>
+          Back
+        </button>
+        <button id='start'>
+          Start
+        </button>
         <div class='container' id='game-board'>
           flush out the game function 1st
           <div class="row">
