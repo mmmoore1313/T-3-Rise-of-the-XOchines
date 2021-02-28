@@ -2,13 +2,13 @@
 const store = require('./../store')
 
 const signUpSuccess = function (response) {
-  console.log('nah, yeeah')
   $('#message').text('Thank you for signing up! Please enter your login credentials')
   $('#sign-up').trigger('reset')
   location.reload()
 }
 
 const signInSuccess = function (response) {
+  console.log('success')
   store.user = response.user
 
   $('#message').text('Welcome back!')

@@ -11,6 +11,7 @@ const signUp = function (data) {
 }
 
 const signIn = function (data) {
+  console.log(data)
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/sign-in',
@@ -20,7 +21,7 @@ const signIn = function (data) {
 
 const signOut = function () {
   return $.ajax({
-    url: config.apiUrl +'/sign-out',
+    url: config.apiUrl + '/sign-out',
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token

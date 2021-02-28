@@ -17,43 +17,68 @@
         <h1>Tic Tac Toe</h1>
       </div>
       <hr>
-      <div id='front-screen'>
-        <button id='newgame'>
-          Quick Game
-        </button>
-        <button id='how-to'>
-          How to
-        </button>
-        <section id='auth-section'>
-          <div id='signon'>
-            <button id='signup'>
-              Sign Up!
-            </button>
-            <form id='sign-up'>
-              <input name='credentials[email]' type='email' placeholder='Your Email' required>
-              <input name='credentials[password]' type='password' placeholder='Enter password' required>
-              <input name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
-              <button>
-                Sign me up!
+      <div class='container' id='game-board'>
+        <div class="row">
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='0' id='attempt'>
+            <div id='joinup'>
+              <button id='signup'>
+                Sign Up!
               </button>
-            </form>
-            <br>
-            <button id='login'>
-              Login!
-            </button>
-            <form id='sign-in'>
-                <input name='credentials[email]' type='email' placeholder='Your Email' required>
-                <input name='credentials[password]' type='password' placeholder='Your Password' required>
-                <button>
-                  Login
-                </button>
-              </form>
+            </div>
           </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='1'>
+            tac
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>
+            <div id='joinin'>
+              <button id='login'>
+                Login!
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='3'>
+            three
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='4'>
+            <div id='quick'>
+              <button id='newgame'>
+                Quick Game
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='5'>
+            a row
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='6'>
+            <div id='how'>
+              <button id='how-to'>
+                How to
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='7'>
+            vs.
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='8'>
+            <div id='aboot'>
+              <button class='about-us'>
+                About Us
+              </button>
+            </div>
+          </div>
+        </div>
+        <section id='game'>
+          <button class='home'>
+            Home
+          </button>
+          <button class='front'>
+            Back
+          </button>
+          <button id='start'>
+            Start
+          </button>
 
         </section>
-        <button class='about-us'>
-          About Us
-        </button>
       </div>
       <section id='user-section'>
         <div id='menu'>
@@ -124,49 +149,7 @@
 
       </div>
       <hr>
-      <section id='game'>
-        <button class='home'>
-          Home
-        </button>
-        <button class='front'>
-          Back
-        </button>
-        <button id='start'>
-          Start
-        </button>
-        <div class='container' id='game-board'>
-          flush out the game function 1st
-          <div class="row">
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='0' id='attempt'>
-              tic
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='1'>
-              tac
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>
-              toe
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='3'>
-              three
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='4'>
-              in
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='5'>
-              a row
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='6'>
-              X
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='7'>
-              vs.
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='8'>
-              O
-            </div>
-          </div>
-        </div>
-      </section>
+
       <section id='messages'>
         <div id='message'></div>
         <div id='games-display'></div>

@@ -9,6 +9,8 @@
 const gameEvents = require('./games/events')
 const authEvents = require('./auth/events')
 
+const forms = require('./forms')
+
 $(() => {
   // your JS code goes here
   // auth events
@@ -16,24 +18,17 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').click(function () {
     event.preventDefault()
-    const signOutHtml = `
-    <h4>Are you sure you want to leave?</h4><br>
-
-    <button id='yeeah'>Yes</button>
-    <button class='naah'>No</button>
-
-    `
-    $('#message').html(signOutHtml)
+    $('#message').html(forms.signOutHtml)
     $('#naah').click(function () {
-        event.preventDefault()
-        $('#message').html('')
-      })
+      event.preventDefault()
+      $('#message').html('')
+    })
     $('#yeeah').on('click', authEvents.onSignOut)
   })
   $('#change-password').on('submit', authEvents.onChagePassword)
 
   // hidden until acted upon with new game
-  $('#game').hide()
+  // $('#game').hide()
   // hidden until acted upon with signup or login buttons
   $('#sign-up').hide()
   $('#sign-in').hide()
@@ -49,13 +44,21 @@ $(() => {
   $('#changepw').hide()
 
   // show buttons
-  $('#signup').click(function (){
+  $('#signup').click(function () {
+    event.preventDefault()
+    $('#joinup').html(forms.signUpHtml)
     $('#sign-up').show()
     $('#signup').hide()
+    $('#sign-in').hide()
+    $('#login').show()
   })
   $('#login').click(function () {
+    event.preventDefault()
+    $('#joinin').html(forms.loginHtml)
     $('#sign-in').show()
+    $('#sign-up').hide()
     $('#login').hide()
+    $('#signup').show()
   })
   $('#edit').click(function () {
     $('#changepw').show()
@@ -84,7 +87,7 @@ $(() => {
     $('#games-index').show()
     $('#user-section').hide()
   })
-  $('#new-game').click(function() {
+  $('#new-game').click(function () {
     $('#game').show()
     $('.home').show()
     $('#user-section').hide()
@@ -96,7 +99,7 @@ $(() => {
     $('#front-screen').hide()
   })
   // oft used buttons
-  $('.home').click( function () {
+  $('.home').click(function () {
     $('#user-section').show()
     $('#howto').hide()
     $('#changepw').hide()

@@ -21,7 +21,6 @@ const onNewGame = function (event) {
 }
 
 const userChoice = function () {
-  console.log('first steps')
   //
   //$('#3').hide()
 }
