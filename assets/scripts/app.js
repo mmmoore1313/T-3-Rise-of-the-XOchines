@@ -52,15 +52,17 @@ $(() => {
     $('#sign-in').hide()
     $('#login').show()
   })
-  $('#login').click('shown.bs.modal', function () {
+  $('#login').click(function () {
     event.preventDefault()
-    $('#joinin').html(forms.loginHtml)
-    $('#email').trigger('focus')
-    event.preventDefault()
-    $('#password').trigger('focus')
+    $('#messages').modal().html(forms.loginHtml).css('color', 'black')
+    $('.close').click(function () {
+      $('#messages').hide()
+      $('.modal-backdrop').hide()
+      $('.front-section').show()
+    })
+    $('#messages').show()
+    $('.modal-backdrop').show()
     $('#sign-in').on('submit', authEvents.onSignIn)
-    $('#front-screen').hide()
-    $('.home').hide()
   })
 
   $('#edit').click('shown.bs.modal', function () {
