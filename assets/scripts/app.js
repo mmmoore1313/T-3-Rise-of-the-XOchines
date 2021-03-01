@@ -9,13 +9,14 @@
 const gameEvents = require('./games/events')
 const authEvents = require('./auth/events')
 
-const forms = require('./forms')
+const forms = require('./templates/forms')
+const staticModal = require('./templates/staticmodals')
+
 
 $(() => {
   // your JS code goes here
   // auth events
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  $('#sign-in').on('submit', authEvents.onSignIn)
+
   $('#sign-out').click(function () {
     event.preventDefault()
     $('#message').html(forms.signOutHtml)
@@ -25,7 +26,6 @@ $(() => {
     })
     $('#yeeah').on('click', authEvents.onSignOut)
   })
-  $('#change-password').on('submit', authEvents.onChagePassword)
 
   // hidden until acted upon with new game
   // $('#game').hide()
@@ -34,39 +34,47 @@ $(() => {
   $('#sign-in').hide()
   // hidden until signed-in
   $('#sign-out').hide()
-  $('#user-section').hide()
+  $('.user-section').hide()
   // hidden until how to is clicked
   $('#howto').hide()
   $('#about').hide()
   $('.home').hide()
   $('#games-index').hide()
   // hidden until edit button is clicked
-  $('#changepw').hide()
 
   // show buttons
   $('#signup').click(function () {
     event.preventDefault()
     $('#joinup').html(forms.signUpHtml)
+    $('#sign-up').on('submit', authEvents.onSignUp)
     $('#sign-up').show()
     $('#signup').hide()
     $('#sign-in').hide()
     $('#login').show()
   })
-  $('#login').click(function () {
+  $('#login').click('shown.bs.modal', function () {
     event.preventDefault()
     $('#joinin').html(forms.loginHtml)
-    $('#sign-in').show()
-    $('#sign-up').hide()
-    $('#login').hide()
-    $('#signup').show()
+    $('#email').trigger('focus')
+    event.preventDefault()
+    $('#password').trigger('focus')
+    $('#sign-in').on('submit', authEvents.onSignIn)
+    $('#front-screen').hide()
+    $('.home').hide()
   })
-  $('#edit').click(function () {
-    $('#changepw').show()
+
+  $('#edit').click('shown.bs.modal', function () {
+    event.preventDefault()
+    $('#changepw').html(forms.changePw)
+    $('#changepw').trigger('focus')
+    $('#change-password').on('submit', authEvents.onChagePassword)
     $('.home').show()
     $('#user-section').hide()
   })
-  $('#how-to').click(function () {
-    $('#howto').show()
+  $('#how-to').click('shown.bs.modal', function () {
+    event.preventDefault()
+    $('#howto').html(staticModal.howToHtml)
+    //$('#howto').trigger('focus')
     $('#front-screen').hide()
     $('.home').hide()
   })
@@ -119,4 +127,5 @@ $(() => {
   $('#start').on('click', gameEvents.onNewGame)
 
   $('#game-board').on('click', gameEvents.userChoice)
+
 })

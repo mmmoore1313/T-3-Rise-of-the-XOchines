@@ -14,10 +14,10 @@ const signInSuccess = function (response) {
   $('#message').text('Welcome back!')
   $('#sign-in').trigger('reset')
 
-  $('#user-section').show()
+  $('.user-section').show()
   $('#sign-out').show()
 
-  $('#front-screen').hide()
+  $('.front-screen').hide()
 }
 
 const signOutSuccess = function () {
