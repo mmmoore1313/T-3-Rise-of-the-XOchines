@@ -62,11 +62,35 @@ const loginHtml = `
 `
 
 const signOutHtml = `
-<h4>Are you sure you want to leave?</h4><br>
-
-<button id='yeeah'>Yes</button>
-<button class='naah'>No</button>
-
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">
+        Is it something we said?
+      </h5>
+      <button type="button" class="close" data-dismiss="modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body">
+      <h6>
+        Are you sure you want to leave?
+      </h6>
+    </div>
+    <div class='modal-footer'>
+      <form id='#sign-out'>
+        <div class='form-control'>
+          <button type='submit' id='yeeah'>
+            Yes
+          </button>
+          <button type='buton' class='naah'>
+            No
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 `
 // const changePw = `
 // <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
