@@ -30,10 +30,7 @@ $(() => {
   // hidden until acted upon with new game
   // $('#game').hide()
   // hidden until acted upon with signup or login buttons
-  $('#sign-up').hide()
-  $('#sign-in').hide()
   // hidden until signed-in
-  $('#sign-out').hide()
   $('.user-section').hide()
   // hidden until how to is clicked
   $('#howto').hide()

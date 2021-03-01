@@ -39,7 +39,7 @@ const changeSuccess = function (response) {
 }
 
 const authFailure = function (response) {
-  $('#heyyou').text('Something went wrong. Please try again')
+  $('.error').text('Something went wrong. Please try again').css('color', 'red')
 }
 
 module.exports = {
