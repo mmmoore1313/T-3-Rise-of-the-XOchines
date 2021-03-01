@@ -10,7 +10,7 @@ const gameEvents = require('./games/events')
 const authEvents = require('./auth/events')
 
 const forms = require('./templates/forms')
-const staticModal = require('./templates/staticmodals')
+const modals = require('./templates/staticmodals')
 
 
 $(() => {
@@ -45,13 +45,16 @@ $(() => {
   // show buttons
   $('#signup').click(function () {
     event.preventDefault()
-    $('#joinup').html(forms.signUpHtml)
+    $('#messages').modal().html(forms.signUpHtml)
     $('#sign-up').on('submit', authEvents.onSignUp)
-    $('#sign-up').show()
-    $('#signup').hide()
-    $('#sign-in').hide()
-    $('#login').show()
+    $('.close').click(function () {
+      $('#messages').hide()
+      $('.modal-backdrop').hide()
+    })
+    $('#messages').show()
+    $('.modal-backdrop').show()
   })
+
   $('#login').click(function () {
     event.preventDefault()
     $('#messages').modal().html(forms.loginHtml).css('color', 'black')
@@ -75,7 +78,7 @@ $(() => {
   })
   $('#how-to').click('shown.bs.modal', function () {
     event.preventDefault()
-    $('#howto').html(staticModal.howToHtml)
+    $('#howto').html(modals.howToHtml)
     //$('#howto').trigger('focus')
     $('#front-screen').hide()
     $('.home').hide()
