@@ -26,7 +26,7 @@ const howToHtml =
   <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title">
-        WaXOn,waXOff
+        WaXOn, waXOff
       </h5>
       <button type="button" class="close" data-dismiss="modal">
         &times;
@@ -43,20 +43,18 @@ const howToHtml =
           There are two arenas in which you may spar:
         </p>
         <ul>
-          <li>
+          <li class='front-section'>
             Quick Game
           </li>
-          <li>
-            New Game
+          <li class='front-section'>
+            Sign Up!
           </li>
         </ul>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+        <p class='error'></p>
+        <button type="button" class="close" data-dismiss="modal">
           Close
-        </button>
-        <button class='home'>
-          Home
         </button>
       </div>
     </div>
