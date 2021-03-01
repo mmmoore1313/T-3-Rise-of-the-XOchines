@@ -1,46 +1,64 @@
 
 const signUpHtml = `
-<form id='sign-up'>
-  <input name='credentials[email]' type='email' placeholder='Your Email' required>
-  <input name='credentials[password]' type='password' placeholder='Enter password' required>
-  <input name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
-  <button>
-    Sign me up!
-  </button>
-</form>
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">
+        Sign Up
+      </h5>
+      <button type="button" class="close" data-dismiss="modal">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body">
+      <form id='sign-up'>
+        <div class='form-group'>
+          <input type="text" class='form-control' name='credentials[email]' placeholder='Your Email' required>
+          <input class='form-control' name='credentials[password]' type='password' placeholder='Enter password' required>
+          <input class='form-control' name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
+          <button type='submit'>
+            Sign me up!
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="close" data-dismiss="modal">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
 `
 const loginHtml = `
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">
           Sign In
         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">
-            &times;
-          </span>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
         </button>
       </div>
       <div class="modal-body">
         <form id='sign-in'>
           <div class='form-group'>
-            <input id="email" type="email" class='form-control' name='credentials[email]' aria-describedby="emailHelp" placeholder='Your Email' required>
+            <input type="text" class='form-control' name='credentials[email]' placeholder='Your Email' required>
             <input id="password" class='form-control' name='credentials[password]' type='password' placeholder='Your Password' required>
             <button type='submit'>
-            Login
+              Login
             </button>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+        <button type="button" class="close" data-dismiss="modal">
           Close
         </button>
       </div>
     </div>
   </div>
-
 `
 
 const signOutHtml = `
