@@ -40,6 +40,7 @@ const changeSuccess = function (response) {
 
 const authFailure = function (response) {
   $('.error').text('Something went wrong. Please try again').css('color', 'red')
+  $('form').trigger('reset')
 }
 
 module.exports = {
