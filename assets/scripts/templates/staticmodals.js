@@ -1,3 +1,25 @@
+const messagesHtml = `
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">
+        Sign In
+      </h5>
+      <button type="button" class="close" data-dismiss="modal">
+        &times;
+      </button>
+    </div>
+    <div class='modal-body' id='heyyou'>
+    </div>
+    <div class='modal-footer'>
+      <button type='button' class='close' data-dismiss='modal'>
+        Rodger dodger
+      </button>
+    </div>
+  </div>
+</div>
+`
+
 const howToHtml =
 `
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -49,5 +71,6 @@ const howToHtml =
 // </div>
 
 module.exports = {
+  messagesHtml,
   howToHtml
 }
