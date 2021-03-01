@@ -34,7 +34,6 @@ const changeSuccess = function (response) {
 }
 
 const authFailure = function (response) {
-  console.log('yeeah, nah')
   $('#message').text('Something went wrong. Please try again')
 }
 
