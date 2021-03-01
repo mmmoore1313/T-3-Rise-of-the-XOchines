@@ -1,4 +1,3 @@
-
 const signUpHtml = `
 <div class="modal-dialog">
   <div class="modal-content">
@@ -23,6 +22,7 @@ const signUpHtml = `
       </form>
     </div>
     <div class="modal-footer">
+      <p class='error'></p>
       <button type="button" class="close" data-dismiss="modal">
         Close
       </button>
@@ -54,6 +54,7 @@ const loginHtml = `
         </form>
       </div>
       <div class="modal-footer">
+        <p class='error'></p>
         <button type="button" class="close" data-dismiss="modal">
           Close
         </button>
@@ -89,6 +90,7 @@ const signOutHtml = `
           </button>
         </div>
       </form>
+      <p class='error'></p>
     </div>
   </div>
 </div>
