@@ -35,10 +35,8 @@
           </div>
           <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>
             <div id='signin'>
-              <button type="button" class="front-screen" data-toggle="modal" id='login' data-target="#joinin">
+              <button type="button" class="front-screen" id='login'>
                 Login!
-                <div class="modal fade" id="joinin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                </div>
               </button>
             </div>
           </div>
@@ -101,24 +99,14 @@
             </div>
           </div>
         </div>
-        <section id='game'>
-          <button class='home'>
-            Home
-          </button>
-          <button class='front'>
-            Back
-          </button>
-          <button id='start'>
-            Start
-          </button>
-
-        </section>
+        <div id='messages' class="modal fade"
+  role="dialog">
+        </div>
       </div>
 
       <hr>
 
-      <section id='messages'>
-        <div id='message'></div>
+
         <div id='games-display'></div>
       </section>
     </body>
