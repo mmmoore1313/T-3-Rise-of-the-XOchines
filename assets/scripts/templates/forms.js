@@ -30,6 +30,7 @@ const signUpHtml = `
   </div>
 </div>
 `
+
 const loginHtml = `
   <div class="modal-dialog">
     <div class="modal-content">
