@@ -65,6 +65,18 @@ $(() => {
     $('#sign-in').on('submit', authEvents.onSignIn)
   })
 
+  $('#how-to').click(function () {
+    event.preventDefault()
+    $('#messages').modal().html(modals.howToHtml).css('color', 'grey')
+    $('.close').click(function () {
+      $('#messages').hide()
+      $('.modal-backdrop').hide()
+      $('.front-section').show()
+    })
+    $('#messages').show()
+    $('.modal-backdrop').show()
+  })
+
   $('#edit').click('shown.bs.modal', function () {
     event.preventDefault()
     $('#changepw').html(forms.changePw)
@@ -73,13 +85,7 @@ $(() => {
     $('.home').show()
     $('#user-section').hide()
   })
-  $('#how-to').click('shown.bs.modal', function () {
-    event.preventDefault()
-    $('#howto').html(modals.howToHtml)
-    //$('#howto').trigger('focus')
-    $('#front-screen').hide()
-    $('.home').hide()
-  })
+
   $('.about-us').click(function () {
     $('#about').show()
     $('#front-screen').hide()
