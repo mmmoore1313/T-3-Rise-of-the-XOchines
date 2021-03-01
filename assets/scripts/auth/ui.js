@@ -1,23 +1,28 @@
 
 const store = require('./../store')
+const forms = require('../templates/forms')
+const modals = require('../templates/staticmodals')
 
 const signUpSuccess = function (response) {
-  $('#message').text('Thank you for signing up! Please enter your login credentials')
+  event.preventDefault()
+  $('#messages').modal().html('#heyyou').text('Thank you for signing up! Please enter your login credentials')
   $('#sign-up').trigger('reset')
   location.reload()
 }
 
 const signInSuccess = function (response) {
-  console.log('success')
   store.user = response.user
 
-  $('#message').text('Welcome back!')
+  $('#messages').html(modals.messagesHtml)
+  $('#heyyou').text('Welcome back!').css('color', 'green')
+  $('.close').click(function () {
+    $('#messages').hide()
+    $('.modal-backdrop').hide()
+    $('.user-section').show()
+    $('.front-screen').hide()
+  })
+
   $('#sign-in').trigger('reset')
-
-  $('.user-section').show()
-  $('#sign-out').show()
-
-  $('.front-screen').hide()
 }
 
 const signOutSuccess = function () {
@@ -34,7 +39,7 @@ const changeSuccess = function (response) {
 }
 
 const authFailure = function (response) {
-  $('#message').text('Something went wrong. Please try again')
+  $('#heyyou').text('Something went wrong. Please try again')
 }
 
 module.exports = {
