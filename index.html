@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>T3: Rise of the XOchines</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div id='title'>
+        <h1>Tic Tac Toe</h1>
+      </div>
+      <hr>
+      <div class='container' id='game-board'>
+        <div class="row">
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='0' id='attempt'>
+            <div class='front-screen' id='joinup'>
+              <button id='signup'>
+                Sign Up!
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='1'>
+            <div class='user-section'>
+              <button class='menu' id='leaderboard'>
+                Stats
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>
+            <div class="front-screen" id='signin'>
+              <button type="button"  id='login'>
+                Login!
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='3'>
+            <div class='user-section'>
+              <button class='menu' id='instructions'>
+                Instructions
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='4'>
+            <div class='front-screen' id='quick'>
+              <button id='newgame'>
+                Quick Game
+              </button>
+            </div>
+            <div class='user-section'>
+              <button class='menu' id='new-game'>
+                New Game
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='5'>
+            <div class='user-section'>
+              <div id='changepw'>
+                <button class='menu' id='edit'>
+                  Edit
+                </button>
+                <button class='home'>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='6'>
+            <div class="front-screen" id='how'>
+              <button type="button" id='how-to'>
+                How to
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='7'>
+            <div class='user-section'>
+              <form class='menu' id='sign-out'>
+                <button>
+                  Signout
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='8'>
+            <div class='front-screen' id='aboot'>
+              <button type="button" class="front-screen" data-toggle="modal" id='how-to' data-target="#howto">
+                About Us
+                <div class="modal fade" id='about-us' tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id='messages' class="modal fade"
+  role="dialog">
+        </div>
+      </div>
+
+      <hr>
+
+
+        <div id='games-display'></div>
+      </section>
+    </body>
+</html>
