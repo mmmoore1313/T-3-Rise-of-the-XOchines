@@ -17,157 +17,94 @@
         <h1>Tic Tac Toe</h1>
       </div>
       <hr>
-      <div id='front-screen'>
-        <button id='newgame'>
-          Quick Game
-        </button>
-        <button id='how-to'>
-          How to
-        </button>
-        <section id='auth-section'>
-          <div id='signon'>
-            <button id='signup'>
-              Sign Up!
-            </button>
-            <form id='sign-up'>
-              <input name='credentials[email]' type='email' placeholder='Your Email' required>
-              <input name='credentials[password]' type='password' placeholder='Enter password' required>
-              <input name='credentials[password_confirmation]' type='password' placeholder='Confirm password' required>
-              <button>
-                Sign me up!
+      <div class='container' id='game-board'>
+        <div class="row">
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='0' id='attempt'>
+            <div class='front-screen' id='joinup'>
+              <button id='signup'>
+                Sign Up!
               </button>
-            </form>
-            <br>
-            <button id='login'>
-              Login!
-            </button>
-            <form id='sign-in'>
-              <input name='credentials[email]' type='email' placeholder='Your Email' required>
-              <input name='credentials[password]' type='password' placeholder='Your Password' required>
-              <button>
-                Login
-              </button>
-            </form>
+            </div>
           </div>
-        </section>
-        <button class='about-us'>
-          About Us
-        </button>
-      </div>
-      <section id='user-section'>
-        <div id='menu'>
-          <button id='leaderboard'>
-            Stats
-          </button>
-          <button id='new-game'>
-            New Game
-          </button>
-          <button id='edit'>
-            Edit
-          </button>
-          <form id='sign-out'>
-            <button>
-              Sign Out!
-            </button>
-          </form>
-          <button id='instructions'>
-            instructions
-          </button>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='1'>
+            <div class='user-section'>
+              <button class='menu' id='leaderboard'>
+                Stats
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>
+            <div class="front-screen" id='signin'>
+              <button type="button"  id='login'>
+                Login!
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='3'>
+            <div class='user-section'>
+              <button class='menu' id='instructions'>
+                Instructions
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='4'>
+            <div class='front-screen' id='quick'>
+              <button id='newgame'>
+                Quick Game
+              </button>
+            </div>
+            <div class='user-section'>
+              <button class='menu' id='new-game'>
+                New Game
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='5'>
+            <div class='user-section'>
+              <div id='changepw'>
+                <button class='menu' id='edit'>
+                  Edit
+                </button>
+                <button class='home'>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='6'>
+            <div class="front-screen" id='how'>
+              <button type="button" id='how-to'>
+                How to
+              </button>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='7'>
+            <div class='user-section'>
+              <form class='menu' id='sign-out'>
+                <button>
+                  Signout
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-4 col-xlg-3 box alt-color" data-cell-index='8'>
+            <div class='front-screen' id='aboot'>
+              <button type="button" class="front-screen" data-toggle="modal" id='how-to' data-target="#howto">
+                About Us
+                <div class="modal fade" id='about-us' tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
-      </section>
-      <div id='changepw'>
-        <h6>
-          Change Password
-        </h6>
-        <form id='change-password'>
-          <input name='passwords[old]' type='password' placeholder='Old Password' required>
-          <input name='passwords[new]' type='password' placeholder='New Password' required>
-          <br>
-          <button>
-            Change Password
-          </button>
-        </form>
-        <button class='home'>
-          Cancel
-        </button>
+        <div id='messages' class="modal fade"
+  role="dialog">
+        </div>
       </div>
-      <div id='howto'>
-        <h2>How To</h2>
-        <p>
-          This is where you learn how to play Tic Tac Toe
-        </p>
-        <button class='front'>
-          Back
-        </button>
-        <button class='home'>
-          Home
-        </button>
-      </div>
-      <div id='about'>
-        <h2>About Us</h2>
-        <p> This is where you can read about our plans</p>
-        <button class='front'>
-          Back
-        </button>
-        <button class='home'>
-          Home
-        </button>
-      </div>
-      <div id='stats'>
-        <button id='games-index'>
-          All games
-        </button>
-        <button class='home'>
-          Home
-        </button>
 
-      </div>
       <hr>
-      <section id='game'>
-        <button class='home'>
-          Home
-        </button>
-        <button class='front'>
-          Back
-        </button>
-        <button id='start'>
-          Start
-        </button>
-        <div class='container' id='game-board'>
-          flush out the game function 1st
-          <div class="row">
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='0' id='attempt'>
-              tic
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='1'>
-              tac
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='2'>
-              toe
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='3'>
-              three
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='4'>
-              in
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='5'>
-              a row
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='6'>
-              X
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='7'>
-              vs.
-            </div>
-            <div class="col-4 col-xlg-3 box alt-color" data-cell-index='8'>
-              O
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id='messages'>
-        <div id='message'></div>
+
+
         <div id='games-display'></div>
       </section>
     </body>
